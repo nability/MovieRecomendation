@@ -1,0 +1,154 @@
+
+    body {
+      font-family: "Alumni Sans SC", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 64px;
+      font-style: normal;
+      transition: background-color 0.3s, color 0.3s;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+
+    /* Light Theme */
+    body.light-mode {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .light-mode .card {
+      background-color: #ffffff;
+      color: #212529;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .light-mode .form-label {
+      color: #212529;
+    }
+
+    .light-mode .result-title {
+      color: #0d6efd;
+    }
+
+    /* Dark Theme */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(255,255,255,0.05);
+    }
+
+    .dark-mode .form-label {
+      color: #ffffff;
+    }
+
+    .dark-mode .result-title {
+      color: #00e0ff;
+    }
+
+    .brand-title {
+      font-size: 8rem;
+      font-weight: 700;
+    }
+
+    .subtitle{
+      font-size: 2rem; 
+    }
+
+    .form-label {
+    font-size: 1.5rem; /* ukuran label */
+    }
+
+    .form-select {
+      font-size: 1.2rem; /* ukuran isi dropdown */
+      padding: 0.6rem;
+    }
+
+    .alert alert-info mt-2 {
+      font-size: 3rem;
+    }
+
+
+    .logo-img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .form-select, .btn {
+      border-radius: 0.5rem;
+    }
+
+    .btn-primary {
+      background-color: #5900ff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #5900ff;
+    }
+
+    .alert-info {
+      border-left: 5px solid #5900ff  ;
+      border-radius: 0.75rem;
+      padding: 1rem;
+    }
+    /* Animasi Umum */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Efek pada Logo dan Judul */
+.logo-img {
+  animation: fadeIn 1s ease-in-out;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.brand-title, .subtitle {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Kartu Form */
+.card {
+  animation: fadeInUp 0.8s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tombol Hover */
+.btn-primary {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  background-color: #0b5ed7;
+}
+
+.card {
+  animation-delay: 0.3s;
+}
+.logo-img {
+  animation-delay: 0.1s;
+}
+
