@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import google.generativeai as genai
 import markdown 
+import os
 # Masukkan API Key Gemini
 genai.configure(api_key="AIzaSyAKVznqz9WIWEBpeEW5b3mX02q2QSi0BS0")
 
@@ -34,5 +35,6 @@ def index():
 
     return render_template("index.html", reply=reply)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
